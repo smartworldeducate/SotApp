@@ -24,7 +24,7 @@ const   PrevEvents = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={{flexDirection:'row',justifyContent:'space-between',width:wp(100),height:hp(8)}}>
-           <TouchableOpacity onPress={()=>navigation.goBack()}>
+           <TouchableOpacity onPress={()=>navigation.goBack(null)}>
            <View style={{flexDirection:'row',marginTop:hp(2)}}>
            <Left style={{marginTop:hp(1),marginLeft:hp(1)}} name='arrowleft' size={25} color="#5669FF"/>
              <Text style={{fontSize:hp(3),marginLeft:hp(2),marginTop:hp(1),color:"black"}}>Previous Events</Text>

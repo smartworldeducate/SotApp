@@ -5,24 +5,27 @@ import {useNavigation, StackActions} from '@react-navigation/native';
 //
 import Logo from '../../assets/img/sot.png';
 
-export default function SplashScreen() {
-  //
-  const navigation = useNavigation();
 
-  useEffect(() => {
+export default function SplashScreen() {
+  
+  const navigation = useNavigation();
+   
+   useEffect(() => {
     setTimeout(async () => {
-      navigation.dispatch(StackActions.replace('DrawerNavigator'));
+      navigation.dispatch(StackActions.replace('Home'));
+      
     }, 4000);
   }, []);
   return (
+    <>
     <View style={styles.container}>
       <StatusBar hidden={true} />
-
       <View style={styles.logoContainer}>
         <Image source={Logo}  />
       </View>
 
     </View>
+    </>
   );
 }
 

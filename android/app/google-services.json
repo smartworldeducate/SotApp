@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "188885903236",
+    "project_id": "sotapp-93992",
+    "storage_bucket": "sotapp-93992.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188885903236:android:252114a2699de8c8bc9fd1",
+        "android_client_info": {
+          "package_name": "com.sot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188885903236-crjb40dt9vtaofc14cdh5kbqh2880ocl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sot",
+            "certificate_hash": "3a15671fd0abd4b8ade4c35204faab6707ad256c"
+          }
+        },
+        {
+          "client_id": "188885903236-0opsc2g3shota8p9o8m1tq6n95qu9kb7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAgeIGAFE-3tljLnT2qTlx4ARxeucW4VQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188885903236-0opsc2g3shota8p9o8m1tq6n95qu9kb7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

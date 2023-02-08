@@ -24,9 +24,9 @@ import ImageIcon from '../component/combocomponent/ImageIcon';
 import DateView from '../component/combocomponent/DateView';
 import Left from 'react-native-vector-icons/Ionicons';
 import Dot from 'react-native-vector-icons/AntDesign';
-import { useNavigation } from '@react-navigation/native'
-const SessionProgramm = () => {
-  const navigation=useNavigation()
+import { useNavigation,DrawerActions } from '@react-navigation/native'
+const SessionProgramm = ({navigation}) => {
+  // const navigation=useNavigation()
   const [dayone,setDayone]=useState(true)
   const [daytwo,setDaytwo]=useState(false)
   const [daythree,setDaythree]=useState(false)
@@ -71,7 +71,7 @@ const data=[
     <View style={styles.container}>
     
     <View style={{flexDirection:'row',justifyContent:'space-between',width:wp(100),height:hp(8)}}>
-           <TouchableOpacity onPress={()=>navigation.openDrawer()}>
+           <TouchableOpacity onPress={()=>navigation.dispatch(DrawerActions.openDrawer())}>
            <View style={{flexDirection:'row',marginTop:hp(2)}}>
            <Left style={{marginTop:hp(1),marginLeft:hp(1)}} name='ios-menu-outline' size={25} color="#1C2833"/>
              <Text style={{fontSize:hp(3),marginLeft:hp(2),marginTop:hp(1),color:"#1C2833",fontFamily:'SourceSansPro-SemiBold'}}>Home</Text>

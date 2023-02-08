@@ -16,8 +16,8 @@ export default function HomeContiBtn({bgColor, btnLabel, textColor, Press}) {
         backgroundColor: "#D0D0D0",
         borderRadius: 15,
         alignItems: 'center',
-        width: 350,
-        paddingVertical: 20,
+        width: wp(80),
+        paddingVertical: hp(2),
         
       }}>
        <View style={{flexDirection:"row"}}>

@@ -1,13 +1,14 @@
 import {View, Text, StatusBar} from 'react-native';
-import React from 'react';
-import StackNavigator from './src/navigation/StackNavigator/StackNavigator';
+import React, { useEffect,useState } from 'react';
+import Routes from './Routes';
 
 
 const App = () => {
+  
   return(
     <>
     <StatusBar barStyle={'dark-content'} backgroundColor='#fff' />
-    <StackNavigator/>
+    <Routes/>
     </>
   )
 };
