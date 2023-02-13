@@ -21,6 +21,7 @@ import {
   import Exibitor from './src/screens/Exibitor';
   import ImagePicker from './src/component/ImagePicker';
   import SessionDetail from './src/screens/SessionDetail';
+  import ScanerScreen from './src/screens/ScanerScreen';
   import Home from './src/screens/Home';
   import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -37,14 +38,11 @@ import {
       console.log(value)
        setData(value)
     }
-    const fbData=async()=>{
-      const value=await AsyncStorage.getItem('fbdata')
-       setData(value)
-    }
+    
     React.useEffect(()=>{
       
       getData()
-      // fbData()
+      
     },[])
      return (
       <Drawer.Navigator
@@ -138,6 +136,11 @@ import {
         <Stack.Screen
           name="Home"
           component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="ScanerScreen"
+          component={ScanerScreen}
           options={{headerShown: false}}
         />
         

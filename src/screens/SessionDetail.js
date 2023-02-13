@@ -386,12 +386,12 @@ export default function SessionDetail({navigation}) {
         {/* evalution popup */}
 
 
-        <BottomSheet isVisible={isEq} style={{flex:1,backgroundColor:"#fff",width:wp(100)}}>
+        <BottomSheet isVisible={isEq} style={{flex:1,backgroundColor:"#fff",width:wp(100),marginTop:hp(30),borderRadius:hp(5),borderColor:'#2ECC71',borderWidth:hp(1)}}>
         <View style={{flexDirection:'row',justifyContent:'space-between',marginTop:hp(5)}}>
             <View style={{marginTop:hp(1),marginLeft:hp(2)}}>
-                <Text style={{fontSize:hp(3),color:"#000000"}}>Evalution</Text>
+                <Text style={{fontSize:hp(3),color:"#ABEBC6"}}>Evalution</Text>
             </View>
-            <View style={{width:wp(12),height:hp(6),borderRadius:hp(50),backgroundColor:"#dcdde1",marginRight:hp(1),marginTop:hp(1)}}>
+            <View style={{width:wp(12),height:hp(6),borderRadius:hp(50),backgroundColor:"#dcdde1",marginRight:hp(1)}}>
                 <TouchableOpacity onPress={() => setIsEq(false)}>
                 <Cancel style={{marginTop:hp(1),marginLeft:hp(1)}} name="cross" size={35} color="red"/>
 

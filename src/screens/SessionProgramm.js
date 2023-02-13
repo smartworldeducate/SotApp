@@ -335,7 +335,7 @@ const data=[
           </TouchableOpacity>
          </View>
          <View style={{width:wp(33)}}>
-          <TouchableOpacity onPress={()=>navigation.navigate('RegisterScreen')}>
+          <TouchableOpacity onPress={()=>navigation.navigate('ScanerScreen')}>
             <View style={{zIndex:1,marginBottom:hp(12),width:wp(18),height:hp(9),backgroundColor:'white',borderRadius:hp(50)}}>
                <View style={{marginLeft:hp(0.4)}}>
                <Scaner name='qr-code-scanner' size={35} color='#1C2833' style={{marginLeft:hp(1.5)}}/>
@@ -369,7 +369,7 @@ export default SessionProgramm;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor:'#F7F9F9'
+    backgroundColor:'#EAEDED'
   },
   sliderContainer: {
     height: 200,
@@ -432,8 +432,7 @@ const styles = StyleSheet.create({
     width: '100%',
     alignSelf: 'center',
     borderRadius: 8,
-    // borderTopRightRadius:0,
-    // borderBottomRightRadius:0
+   
     
     
     

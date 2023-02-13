@@ -21,6 +21,7 @@ import Event from 'react-native-vector-icons/MaterialIcons';
 import Session from 'react-native-vector-icons/MaterialIcons';
 import Hand from 'react-native-vector-icons/MaterialCommunityIcons';
 import Notification from 'react-native-vector-icons/EvilIcons';
+import Logout from 'react-native-vector-icons/AntDesign';
 import { useNavigation,StackActions } from '@react-navigation/native';
 
 
@@ -39,9 +40,6 @@ const DrawerContent = ({ navigation}) => {
   const onPressLogout = async () => {
     console.log("logout call")
      await AsyncStorage.removeItem('user');
-    await AsyncStorage.removeItem('fbuser');
-    const db = await AsyncStorage.getItem('user');
-    console.log(db)
     navigation.dispatch(StackActions.replace('Home'));
     navigation.closeDrawer()
    
@@ -134,12 +132,12 @@ const DrawerContent = ({ navigation}) => {
           </TouchableOpacity>
        </View>
 
-       <View style={{width:wp(60),height:hp(0.5),backgroundColor:"gray",marginLeft:hp(2),marginTop:hp(3)}}></View>
+       <View style={{width:wp(60),height:hp(0.5),backgroundColor:"#F1948A",marginLeft:hp(2),marginTop:hp(3),borderRadius:hp(70)}}></View>
        <View style={{width:wp(50),height:hp(5),marginTop:wp(10)}}>
           <TouchableOpacity onPress={()=>onPressLogout()}>
             <View style={{flexDirection:'row',marginLeft:hp(3)}}>
               <View >
-                <Notification name='bell' size={35} color="#5669FF"/>
+                <Logout name='logout' size={35} color="#F1948A"/>
               </View>
               <View style={{marginLeft:hp(4)}}>
                 <Text style={{backgroundColor:"#fff",fontSize:hp(3),color:'#000000'}}>Logout</Text>

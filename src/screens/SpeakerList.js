@@ -35,14 +35,14 @@ export default function SpeakerList() {
         
 
         </View>
-            <View style={{backgroundColor:"#fff",width:wp(95),height:hp(6),borderRadius:50,borderColor:"gray",borderWidth:1,flexDirection:'row',marginLeft:hp(1),paddingHorizontal:hp(0)}}>
+            <View style={{backgroundColor:"#fff",width:wp(95),height:hp(6),borderRadius:50,borderColor:"#EAEDED",borderWidth:3,flexDirection:'row',marginLeft:hp(1),paddingHorizontal:hp(0)}}>
                 <View style={{width:wp(85)}}>
                     <TextInput
 
                         style={{ backgroundColor:"#fff",borderRadius: 100, color: '#1C2833', paddingHorizontal: 10, paddingVertical: 15, width: wp(80), marginVertical: 10, borderColor: "#EBEEF2",color:'black' }}
                         placeholderStyle={{marginLeft:hp(2),color:"#1C2833"}} placeholder='Search'></TextInput>
                 </View>
-                <View style={{marginTop:hp(2),marginRight:hp(12),width:wp(15)}}>
+                <View style={{marginTop:hp(1),marginRight:hp(12),width:wp(15)}}>
                 <Icon style={{marginRight:hp(2)}} name='search1' size={25} color="gray"/>
                 </View>
                 <View>
@@ -55,7 +55,7 @@ export default function SpeakerList() {
             <ScrollView>
                 {data.map((item,index)=>{
                     return(
-                        <View style={{backgroundColor:"#fff",shadowColor:'#000',shadowOpacity:0.25,shadowRadius: 3.84,shadowOffset:{width:0, height:3},width:wp(95),height:hp(12),borderRadius:12,borderColor:"#EBEEF2",borderWidth:1,flexDirection:'row',marginLeft:hp(1),paddingHorizontal:hp(0),marginTop:hp(4)}} key={index}>
+                        <View style={{backgroundColor:"#fff",shadowColor:'#000',shadowRadius: 3.84,shadowOffset:{width:5, height:5},width:wp(95),height:hp(12),borderRadius:20,borderColor:"#EBEDEF",borderWidth:5,flexDirection:'row',marginLeft:hp(1),paddingHorizontal:hp(0),marginTop:hp(4)}} key={index}>
                         <View style={{width:wp(20)}}>
                         <Image style={{height:hp(10),width:hp(10),borderRadius:hp(50),marginTop:hp(1),marginLeft:hp(0.5)}} source={Image1}  />
                         </View>

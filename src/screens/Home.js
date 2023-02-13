@@ -24,14 +24,14 @@ export default function Home() {
       // console.log(e)
     }
   }
-  const fbData = async (value) => {
-    // console.log(value)
-    try {
-      await AsyncStorage.setItem('fbdata', value)
-    } catch (e) {
-      // console.log(e)
-    }
-  }
+  // const fbData = async (value) => {
+  //   // console.log(value)
+  //   try {
+  //     await AsyncStorage.setItem('fbdata', value)
+  //   } catch (e) {
+  //     // console.log(e)
+  //   }
+  // }
   useEffect(()=>{
     GoogleSignin.configure({
       webClientId: '188885903236-0opsc2g3shota8p9o8m1tq6n95qu9kb7.apps.googleusercontent.com',
@@ -63,7 +63,7 @@ export default function Home() {
   const loginWithFacebook=async()=>{
      // Attempt login with permissions
   const result = await LoginManager.logInWithPermissions(['public_profile', 'email']);
-  
+  navigation.navigate('SessionProgramm');
   if (result.isCancelled) {
     throw 'User cancelled the login process';
   }
@@ -94,9 +94,7 @@ export default function Home() {
         
        <View style={styles.buttonContainer}>
           <View style={{marginBottom:hp(3),marginLeft:hp(2)}}>
-          {/* <FbBtn textColor='white' bgColor={darkGreen} btnLabel="Continue with Google" Press={() => alert("Logged In")} />
           
-          */}
 
           <TouchableOpacity
               onPress={()=>signinWithGoogle().then(res=>{
@@ -134,7 +132,7 @@ export default function Home() {
               onPress={()=>loginWithFacebook().then(res=>{
                 console.log("facebook response:",res?.additionalUserInfo?.profile?.id)
                 const {id}=res?.additionalUserInfo?.profile
-                fbData(id)
+                // storeData(id)
               }).catch(error=>{
                 console.log(error)
               })}
